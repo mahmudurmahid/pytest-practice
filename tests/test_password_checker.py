@@ -3,6 +3,7 @@ from lib.password_checker import *
 
 """
 Password is equal or longer than 8 char
+Returns True
 """
 def test_password_checker_8_char_long():
     password_checker = PasswordChecker()
@@ -10,6 +11,7 @@ def test_password_checker_8_char_long():
 
 """
 Password is not 8 char
+Returns "Invalid password, must be 8+ characters."
 """
 def test_password_checker_less_than_8_char():
     password_checker = PasswordChecker()
