@@ -4,7 +4,7 @@ from lib.present import *
 """
 Wrapping a present twice should raise an exception
 """
-def test_present_wrap():
+def test_present_wrap_for_already_wrapped_present():
     present = Present()
     present.wrap("football")
     with pytest.raises(Exception) as e:
@@ -15,7 +15,7 @@ def test_present_wrap():
 """
 Unwrapping a present before anything is wrapped should raise an exception
 """
-def test_present_unwrap():
+def test_present_unwrap_for_no_existing_present():
     present = Present()
     with pytest.raises(Exception) as e:
         present.unwrap()
