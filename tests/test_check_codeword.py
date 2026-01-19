@@ -1,13 +1,25 @@
 from lib.check_codeword import *
 
-def test_check_codeword_return_correct_come_in_for_horse():
+"""
+If codeword is correct,
+returns 'Corect! Come in.'
+"""
+def test_check_correct_codeword():
     result = check_codeword("horse")
     assert result == "Correct! Come in."
 
-def test_check_codeword_return_close_but_nope_for_haste():
+"""
+If codeword is close,
+returns 'Close, but nope.'
+"""
+def test_check_close_codeword():
     result = check_codeword("haste")
     assert result == "Close, but nope."
 
-def test_check_codeword_return_wrong_for_donkey():
+"""
+If codeword is wrong,
+returns 'WRONG!'
+"""
+def test_check_codeword_wrong_codeword():
     result = check_codeword("monkey")
     assert result == "WRONG!"
