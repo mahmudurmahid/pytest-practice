@@ -29,3 +29,13 @@ def test_present_unwrap_for_no_existing_present():
         present.unwrap()
     error_message = str(e.value)
     assert error_message == "No contents have been wrapped."
+
+"""
+Wrapping an existing present does not change the wrapped value
+"""
+def test_present_wrap_again_no_value_change():
+    present = Present()
+    present.wrap("football")
+    with pytest.raises(Exception) as e:
+        present.wrap("hot wheels")
+    assert present.unwrap() == "football"
