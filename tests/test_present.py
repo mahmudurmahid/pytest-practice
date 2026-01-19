@@ -1,6 +1,9 @@
 import pytest
 from lib.present import *
 
+"""
+Wrapping a present twice should raise an exception
+"""
 def test_present_wrap():
     present = Present()
     present.wrap("football")
@@ -9,6 +12,9 @@ def test_present_wrap():
     error_message = str(e.value)
     assert error_message == "A contents has already been wrapped."
 
+"""
+Unwrapping a present before anything is wrapped should raise an exception
+"""
 def test_present_unwrap():
     present = Present()
     with pytest.raises(Exception) as e:
