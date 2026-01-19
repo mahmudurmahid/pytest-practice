@@ -1,6 +1,12 @@
 import pytest
 from lib.present import *
 
+"""Wrap and unwrap a present"""
+def test_present_wrap_and_unwrap():
+    present = Present()
+    present.wrap("football")
+    assert present.unwrap() == "football"
+
 """
 Wrapping a present twice should raise an exception
 """
