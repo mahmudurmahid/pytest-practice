@@ -24,3 +24,23 @@ def test_string_builder_to_return_size():
     string_builder.add("hello, world!")
 
     assert string_builder.size() == 13
+
+"""
+When we add multiple strings, they are concatenated
+"""
+def test_string_builder_adding_multiple_strings_output():
+    string_builder = StringBuilder()
+    string_builder.add("hello, ")
+    string_builder.add("world!")
+
+    assert string_builder.output() == "hello, world!"
+
+"""
+When we add multiple strings, the sizes are added together
+"""
+def test_string_builder_adding_multiple_strings_size():
+    string_builder = StringBuilder()
+    string_builder.add("hello, ")
+    string_builder.add("world!")
+
+    assert string_builder.size() == 13
